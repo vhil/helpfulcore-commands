@@ -42,6 +42,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Sitecore.Buckets, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Buckets.NoReferences.8.2.160729\lib\NET452\Sitecore.Buckets.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Sitecore.Kernel, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.Kernel.NoReferences.8.2.160729\lib\NET452\Sitecore.Kernel.dll</HintPath>
       <Private>True</Private>
@@ -58,6 +62,7 @@
   <ItemGroup>
     <Compile Include="DataSourceService.cs" />
     <Compile Include="Pipelines\UiCopyItems\UpdateDataSources.cs" />
+    <Compile Include="Pipelines\UiDuplicateItem\BucketsItemDuplicate.cs" />
     <Compile Include="Pipelines\UiDuplicateItem\UpdateDataSources.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
