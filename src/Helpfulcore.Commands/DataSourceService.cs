@@ -24,7 +24,7 @@
 
                 using (new EditContext(destination))
                 {
-                    destination[FieldIDs.LayoutField] = UpdateRenderingDataSourses(original, destination, FieldIDs.LayoutField);
+                    destination[FieldIDs.LayoutField] = this.UpdateRenderingDataSourses(original, destination, FieldIDs.LayoutField);
                 }
 
                 var languages = LanguageManager.GetLanguages(destination.Database);
@@ -35,7 +35,7 @@
                     destination = originalItem.Database.GetItem(destination.ID, language);
                     using (new EditContext(destination))
                     {
-                        destination[FieldIDs.FinalLayoutField] = UpdateRenderingDataSourses(original, destination, FieldIDs.FinalLayoutField);
+                        destination[FieldIDs.FinalLayoutField] = this.UpdateRenderingDataSourses(original, destination, FieldIDs.FinalLayoutField);
                     }
                 }
             }
@@ -139,7 +139,7 @@
             {
                 result.Add(child);
 
-                result.AddRange(GetChildrenReccursively(child));
+                result.AddRange(this.GetChildrenReccursively(child));
             }
 
             return result;
